@@ -5,7 +5,7 @@ on:
 
 defaults:
   run:
-    working-directory: ./infrastructure/tf-app
+    working-directory: ./
 
 permissions:
   actions: read
