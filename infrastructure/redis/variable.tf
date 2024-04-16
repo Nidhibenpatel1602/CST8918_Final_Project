@@ -1,6 +1,6 @@
 variable "resource_group_name" {
   description = "Name of the resource group"
-  default     = "weather-app-rg"
+  default     = "cst8918-final-project-group-02"
 }
 
 variable "location" {

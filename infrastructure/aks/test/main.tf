@@ -3,7 +3,7 @@ provider "azurerm" {
 }
 
 resource "azurerm_resource_group" "aks_test" {
-  name     = "rg-aks-test"
+  name     = "cst8918-final-project-group-02"
   location = "Canada Central"
 }
 
@@ -18,6 +18,7 @@ resource "azurerm_kubernetes_cluster" "test" {
     name       = "default"
     node_count = 1
     vm_size    = "Standard_B2s"
+    vnet_subnet_id = "10.1.0.0/16"
   }
 
   identity {
