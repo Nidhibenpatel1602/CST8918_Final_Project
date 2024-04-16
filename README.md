@@ -2,7 +2,7 @@ Professor: Robert McKenney
 
 # Final Project: Terraform, Azure AKS, and GitHub Actions
 
-## Team#4
+## Team #2
 - Divya Shruthi Murisetty
 - Nidhiben Patel
 - Parvezbhai Malik
@@ -26,7 +26,7 @@ Our Terraform setup is neatly tucked away in an Azure Blob Storage backend. Orga
 ### Collaboration
 - *Repository:* [Github Repo](https://github.com/Nidhibenpatel1602/CST8918_Final_Project.git)
 - *Team Members:*
-  - [Divya Shruti](https://github.com/DivyaShruthiM)
+  - [Divya Shruthi](https://github.com/DivyaShruthiM)
   - [Nidhiben Patel](https://github.com/Nidhibenpatel1602)
   - [Parvezbhai Malik](https://github.com/male0120)
   - [Yash Solanki](https://github.com/yash261260)
