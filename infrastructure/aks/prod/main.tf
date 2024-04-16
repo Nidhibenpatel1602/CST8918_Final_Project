@@ -30,7 +30,6 @@ resource "azurerm_kubernetes_cluster" "prod" {
     min_count  = 1
     max_count  = 3
     vm_size    = "Standard_B2s"
-    vnet_subnet_id = ["10.0.0.0/16"]
   }
 
   identity {
