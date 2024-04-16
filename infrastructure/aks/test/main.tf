@@ -18,7 +18,7 @@ resource "azurerm_kubernetes_cluster" "test" {
     name       = "default"
     node_count = 1
     vm_size    = "Standard_B2s"
-    vnet_subnet_id = [10.1.0.0/16]
+    vnet_subnet_id = ["10.1.0.0/16"]
   }
 
   identity {
