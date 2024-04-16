@@ -22,7 +22,7 @@ resource "azurerm_kubernetes_cluster" "prod" {
   resource_group_name = azurerm_resource_group.aks_prod.name
   node_resource_group = "rg-aks-prod-nodes"
   dns_prefix          = "aks-prod"
-  
+
 
   default_node_pool {
     name       = "default"
