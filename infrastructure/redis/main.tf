@@ -1,11 +1,11 @@
 provider "azurerm" {
-
   features {}
+  use_oidc = true
 }
 
 # Create the Resource Group
 resource "azurerm_resource_group" "rg" {
-  name     = "weather-app-rg"
+  name     = "cst8918-final-project-group-02"
   location = "Canada Central"
 }
 

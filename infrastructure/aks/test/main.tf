@@ -3,7 +3,7 @@ provider "azurerm" {
 }
 
 resource "azurerm_resource_group" "aks_test" {
-  name     = "rg-aks-test"
+  name     = "cst8918-final-project-group-02"
   location = "Canada Central"
 }
 
