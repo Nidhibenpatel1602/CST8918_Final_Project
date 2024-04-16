@@ -1,0 +1,51 @@
+name: Deploy Remix Weather App to AKS
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'application/**'
+  push:
+    branches:
+      - main
+    paths:
+      - 'application/**'
+
+jobs:
+  deploy-to-test:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    environment: test
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v3
+
+    - name: Set up Azure CLI
+      uses: azure/login@v1
+      with:
+        creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+    - name: Deploy to Test AKS
+      run: |
+        az aks get-credentials --resource-group <Test-Resource-Group> --name <Test-AKS-Cluster-Name> --overwrite-existing
+        kubectl apply -f deployment/test/kubernetes.yml
+
+  deploy-to-prod:
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    environment: production
+    needs: [deploy-to-test]
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v3
+
+    - name: Set up Azure CLI
+      uses: azure/login@v1
+      with:
+        creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+    - name: Deploy to Production AKS
+      run: |
+        az aks get-credentials --resource-group <Prod-Resource-Group> --name <Prod-AKS-Cluster-Name> --overwrite-existing
+        kubectl apply -f deployment/prod/kubernetes.yml
