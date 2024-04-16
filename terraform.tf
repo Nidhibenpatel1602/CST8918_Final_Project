@@ -26,6 +26,6 @@ module "aks" {
   source = "./infrastructure/aks"
 }
 
-module "reddis" {
-  source = "./infrastructure/reddis"
+module "redis" {
+  source = "./infrastructure/redis"
 }
