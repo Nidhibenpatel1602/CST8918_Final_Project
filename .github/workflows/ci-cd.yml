@@ -19,7 +19,7 @@ env:
 
 defaults:
   run:
-    working-directory: ./infra/tf-app  
+    working-directory: ./
   
 jobs:
   tflint:
