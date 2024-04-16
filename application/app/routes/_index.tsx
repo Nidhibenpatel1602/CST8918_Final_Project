@@ -96,7 +96,7 @@ export default function CurrentConditions() {
           borderRadius: '0.25rem'
         }}
       >
-        <h2>Raw Data</h2>
+        <h3>Raw Data</h3>
         <pre>{JSON.stringify(currentConditions, null, 2)}</pre>
       </section>
       <hr style={{marginTop: '2rem'}} />
